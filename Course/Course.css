@@ -1,0 +1,150 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #ffffff;
+        color: #222;
+        overflow-x: hidden;
+    }
+
+    /* Top Header */
+    .Top {
+        background-color: #1e1e1e;
+        color: white;
+        padding: 18px 12px;
+    }
+
+    .NavWrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding: 6px;
+        width: 130px;
+        object-fit: cover;
+    }
+
+    /* Nav Links */
+    .butnev,
+    .butnev2 {
+        display: flex;
+        gap: 12px;
+    }
+
+    .butnev a,
+    .butnev2 a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    .butnev a:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .butnev2 {
+        background: linear-gradient(90deg, #0f3684, #6ee7b7);
+        padding: 6px;
+        border-radius: 12px;
+    }
+
+    /* Container for the card section */
+    .cards {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Divider line */
+    .divider {
+        border: none;
+        height: 2px;
+        background-color: #0f3684;
+        margin: 20px 0;
+    }
+
+    /* GRID LAYOUT */
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* Single card */
+    .card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #222;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+        transition: 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Card Image */
+    .cardimg {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    /* Course names */
+    .card h4 {
+        margin: 8px 0;
+        font-size: 18px;
+        color: #0e1d3e;
+    }
+
+    /* Description */
+    .card p {
+        font-size: 14px;
+        color: #444;
+    }
+
+    #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0f0f0f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        z-index: 9999;
+    }
+
+    .spinner {
+        width: 60px;
+        height: 60px;
+        border: 6px solid #444;
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }

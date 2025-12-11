@@ -1,0 +1,57 @@
+/* Fullscreen loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0f0f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 2s;
+    /* duration before fade */
+}
+
+/* Spinner animation */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #444;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+/* Keyframes */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Hide content until loader finishes */
+#Mainpage {
+    opacity: 0;
+    animation: showContent 1s ease forwards;
+    animation-delay: 3s;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+    }
+}
